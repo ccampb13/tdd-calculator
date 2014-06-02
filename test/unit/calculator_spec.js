@@ -41,26 +41,26 @@ describe('Calculator', function(){
     });
   });
 
-  describe('.fractionAdd', function(){
-    it('adds fractions together', function(){
-      var sum = Calculator.fractionAdd([{x:5, y:4}, {x:2, y:6}]);
-      console.log(sum);
-      // expect(sum).to.equal({23:20});
+  // describe('.fractionAdd', function(){
+  //   it('adds fractions together', function(){
+  //     var sum = Calculator.fractionAdd([{x:5, y:4}, {x:2, y:6}]);
+  //     console.log(sum);
+  //     // expect(sum).to.equal({23:20});
+  //   });
+  // });
+
+  describe('.addTwoFractions', function(){
+    it('should add two fractions', function(){
+      var fraction = Calculator.addTwoFractions('1/3', '2/4');
+      expect(fraction).to.equal('10/12');
     });
   });
 
-  // describe('.addTwoFractions', function(){
-  //   it('should add two fractions', function(){
-  //     var fraction = Calculator.addTwoFractions('1/3', '2/4');
-  //     expect(fraction).to.equal('10/12');
-  //   });
-  // });
-
-  // describe('.addFractions', function(){
-  //   it('should add a list of fractions', function(){
-  //     var fraction = Calculator.addFractions('1/3', '2/4', '3/5');
-  //     expect(fraction).to.equal('10/12');
-  //   });
-  // });
+  describe('.addFractions', function(){
+    it('should add a list of fractions', function(){
+      var fraction = Calculator.addFractions('1/3', '2/4', '3/5');
+      expect(fraction).to.equal('86/60');
+    });
+  });
 
 });
